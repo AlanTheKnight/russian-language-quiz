@@ -7,8 +7,6 @@ class Timer {
         this.interval = null;
         this.initialTime = null;
         this.ended = false;
-        this.tick_audio = new Audio("audio/tick.mp3");
-        this.tick_audio.volume = 0.2;
         this.end_audio = new Audio("audio/gong.mp3");
     }
 
@@ -55,7 +53,6 @@ class Timer {
         const emojis = "🕛 🕐 🕑 🕒 🕓 🕔 🕕 🕖 🕗 🕘 🕙 🕚".split(" ");
         $("#counter").html(emojis[(this.initialTime - this.startTime) % 12] + this.startTime + "с");
         $("#progress-bar").css("width",(this.startTime) / (this.initialTime / 100) + "vw");
-        await this.tick_audio.play();
     }
 }
 
