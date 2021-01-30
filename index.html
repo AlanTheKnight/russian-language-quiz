@@ -1150,6 +1150,7 @@
 						runTimer();
 				} else if ($(event.currentSlide).hasClass("stop-timer")) {
 					timer.running = false;
+					timer.ended = true;
 				} else if (!$(event.currentSlide).hasClass("question-slide")) {
 					timer.running = false;
 					timer.ended = true;

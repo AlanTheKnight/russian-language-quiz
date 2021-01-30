@@ -41,10 +41,10 @@ class Timer {
         if (this.startTime > 0 && this.running) {
             this.startTime--;
             this.updateTimer();
-        } else if (this.startTime <= 0) {
+        } else if (this.startTime <= 0 || this.ended) {
             this.running = false;
             this.ended = true;
-            clearInterval();
+            clearInterval(this.interval);
         }
     }
 
