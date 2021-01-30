@@ -1,0 +1,15 @@
+#timer {
+    font-family: "Google Sans", serif;
+    font-size: 8vh;
+    text-align: center;
+    vertical-align: center
+}
+
+#progress-bar {
+    position: absolute;
+    background-color: #9ea2dc;
+    width: 100%;
+    bottom: 0;
+    z-index: -5;
+}
+
