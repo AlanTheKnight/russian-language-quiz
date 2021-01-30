@@ -8,6 +8,7 @@ class Timer {
         this.initialTime = null;
         this.ended = false;
         this.tick_audio = new Audio("audio/tick.mp3");
+        this.tick_audio.volume = 0.2;
         this.end_audio = new Audio("audio/gong.mp3");
     }
 
