@@ -1149,6 +1149,9 @@
 					if (!timer.running)
 						runTimer();
 				} else if ($(event.currentSlide).hasClass("stop-timer")) {
+					if (!timer.ended) {
+						timer.end_audio.play();
+					}
 					timer.running = false;
 					timer.ended = true;
 				} else if (!$(event.currentSlide).hasClass("question-slide")) {

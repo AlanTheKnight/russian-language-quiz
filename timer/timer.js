@@ -7,6 +7,8 @@ class Timer {
         this.interval = null;
         this.initialTime = null;
         this.ended = false;
+        this.tick_audio = new Audio("audio/tick.mp3");
+        this.end_audio = new Audio("audio/gong.mp3");
     }
 
     setup() {
@@ -28,30 +30,31 @@ class Timer {
         this.refreshTime();
         this.interval = setInterval(function () {
             t.refreshTime();
-            if (t.ended) {
-                clearInterval(t.interval);
-                t.element.hide();
-                t.element.css("height", "0vh");
-                t.presentation.css("height", "100vh");
-            }
         }, 1000);
     }
 
-    refreshTime() {
+    async refreshTime() {
         if (this.startTime > 0 && this.running) {
             this.startTime--;
-            this.updateTimer();
+            await this.updateTimer();
         } else if (this.startTime <= 0 || this.ended) {
             this.running = false;
             this.ended = true;
             clearInterval(this.interval);
+            this.element.hide();
+            this.element.css("height", "0vh");
+            this.presentation.css("height", "100vh");
+            if (this.startTime <= 0) {
+                await this.end_audio.play();
+            }
         }
     }
 
-    updateTimer() {
+    async updateTimer() {
         const emojis = "🕛 🕐 🕑 🕒 🕓 🕔 🕕 🕖 🕗 🕘 🕙 🕚".split(" ");
         $("#counter").html(emojis[(this.initialTime - this.startTime) % 12] + this.startTime + "с");
-        $("#progress-bar").css("width",(this.startTime) / (this.initialTime / 100) + "vw")
+        $("#progress-bar").css("width",(this.startTime) / (this.initialTime / 100) + "vw");
+        await this.tick_audio.play();
     }
 }
 
