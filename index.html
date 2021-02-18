@@ -1146,8 +1146,7 @@
 
 			pres.on('slidechanged', event => {
 				if ($(event.currentSlide).hasClass("start-timer")) {
-					if (!timer.running)
-						runTimer();
+					runTimer();
 				} else if ($(event.currentSlide).hasClass("stop-timer")) {
 					if (!timer.ended) {
 						timer.end_audio.play();
@@ -1161,7 +1160,8 @@
 			});
 
 			function runTimer() {
-				timer.startTimer(60);
+				if (!timer.running)
+					timer.startTimer(60);
 			}
 		</script>
 	</body>
