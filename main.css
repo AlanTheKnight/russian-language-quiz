@@ -13,7 +13,6 @@
     border: none !important;
 }
 
-
 .category {
     border-bottom: none !important;
     font-size: 0.7em;
@@ -33,6 +32,10 @@
     box-shadow: 0 0 20px rgba(0, 0 ,0 , 0.5);
 }
 
+.category-link.visited {
+    background-color: rgb(65, 70, 104);
+}
+
 #foreign-literature > h1 {
     text-shadow: 1px 1px 8px black !important;
     color: #fff !important;
@@ -50,3 +53,25 @@
     right: 30%;
 }
 
+.questions-row > td {
+    border-right: 1px solid black;
+}
+
+.questions-row > td > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.questions-row > td:last-child {
+    border-right: none !important;
+}
+
+.questions-row > td.visited > a {
+    color: #008000;
+}
+
+#finish-btn {
+    margin-top: 5vh;
+    display: none;
+}
