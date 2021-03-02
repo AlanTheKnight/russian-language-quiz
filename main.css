@@ -41,7 +41,7 @@
     color: #fff !important;
 }
 
-#end {
+.full-size {
     width: 100%;
     height: 100%;
 }
@@ -74,4 +74,13 @@
 #finish-btn {
     margin-top: 5vh;
     display: none;
+}
+
+.time-input-wrapper {
+    text-align: left;
+}
+
+.timer-val {
+    margin-left: 5vw;
+    font-size: 0.9em;
 }
