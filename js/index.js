@@ -56,3 +56,4 @@ Reveal.isReady = () => false;
 Reveal.VERSION = VERSION;
 
 export default Reveal;
+console.log(`1`);

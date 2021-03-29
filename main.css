@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Noto Color Emoji Windows";
+    src: url(fonts/NotoColorEmoji_WindowsCompatible.ttf);
+}
+
+@font-face {
+    font-family: "Noto Color Emoji";
+    src: url(fonts/NotoColorEmoji.ttf);
+}
+
 .options {
     text-align: left;
     padding-left: 5vw;
@@ -92,4 +102,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.emoji {
+    font-family: "Noto Color Emoji", serif !important;
+}
+
+#clock {
+    font-family: "Noto Color Emoji", serif !important;
 }
