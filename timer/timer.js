@@ -51,7 +51,7 @@ class Timer {
 
     async updateTimer() {
         const emojis = "🕛 🕐 🕑 🕒 🕓 🕔 🕕 🕖 🕗 🕘 🕙 🕚".split(" ");
-        $("#counter").html(emojis[(this.initialTime - this.startTime) % 12] + this.startTime + "с");
+        $("#counter").html(`<span class="emoji">` + emojis[(this.initialTime - this.startTime) % 12] + `</span>` + this.startTime + "с");
         $("#progress-bar").css("width",(this.startTime) / (this.initialTime / 100) + "vw");
     }
 }

@@ -333,7 +333,7 @@
 							<a href="#categories">Перейти к категориям <span class="emoji">📁</span></a>
 						</div>
 						<div style="margin-top: 5vh;">
-							<a href="#part-final">Финальный тур <span class="emoji">🏆</span></a>
+							<a href="#/part-final">Финальный тур <span class="emoji">🏆</span></a>
 						</div>
 					</section>
 				</section>
@@ -428,7 +428,7 @@
 							<a href="#categories">Перейти к категориям <span class="emoji">📁</span></a>
 						</div>
 						<div style="margin-top: 5vh;">
-							<a href="#part-final">Финальный тур <span class="emoji">🏆</span></a>
+							<a href="#/part-final">Финальный тур <span class="emoji">🏆</span></a>
 						</div>
 					</section>
 				</section>
@@ -524,7 +524,7 @@
 							<a href="#categories">Перейти к категориям <span class="emoji">📁</span></a>
 						</div>
 						<div style="margin-top: 5vh;">
-							<a href="#part-final">Финальный тур <span class="emoji">🏆</span></a>
+							<a href="#/part-final">Финальный тур <span class="emoji">🏆</span></a>
 						</div>
 					</section>
 				</section>
@@ -619,7 +619,7 @@
 							<a href="#categories">Перейти к категориям <span class="emoji">📁</span></a>
 						</div>
 						<div style="margin-top: 5vh;">
-							<a href="#part-final">Финальный тур <span class="emoji">🏆</span></a>
+							<a href="#/part-final">Финальный тур <span class="emoji">🏆</span></a>
 						</div>
 					</section>
 				</section>
@@ -715,7 +715,7 @@
 							<a href="#categories">Перейти к категориям <span class="emoji">📁</span></a>
 						</div>
 						<div style="margin-top: 5vh;">
-							<a href="#part-final">Финальный тур <span class="emoji">🏆</span></a>
+							<a href="#/part-final">Финальный тур <span class="emoji">🏆</span></a>
 						</div>
 					</section>
 				</section>
@@ -798,15 +798,13 @@
 							<a href="#categories">Перейти к категориям <span class="emoji">📁</span></a>
 						</div>
 						<div style="margin-top: 5vh;">
-							<a href="#part-final">Финальный тур <span class="emoji">🏆</span></a>
+							<a href="#/part-final">Финальный тур <span class="emoji">🏆</span></a>
 						</div>
 					</section>
 				</section>
 
-				<section>
-					<section id="part-final"  data-background-image="images/bg.jpg" data-background-repeat="repeat" data-background-size="10%" data-background-opacity="0.1">
-						<h1 class="r-fit-text"><span class="emoji">🤯</span> Заключительный тур</h1>
-					</section>
+				<section id="part-final"  data-background-image="images/bg.jpg" data-background-repeat="repeat" data-background-size="10%" data-background-opacity="0.1">
+					<h1 class="r-fit-text"><span class="emoji">🤯</span> Заключительный тур</h1>
 				</section>
 
 				<section>
@@ -861,7 +859,7 @@
 								<td><a href="#q-36">36</a></td>
 							</tr>
 						</table>
-						<div id="finish-btn"><small><a href="#end">🏁 Закончить викторину</a></small></div>
+						<div id="finish-btn"><small><a href="#end"><span class="emoji">🏁</span> Закончить викторину</a></small></div>
 					</section>
 					<section class="question-slide" id="q-1">
 						1. Назовите первого редактора журнала «Современник»
@@ -1009,8 +1007,8 @@
 					</section>
 				</section>
 				<section id="end" class="full-size"  data-background-image="images/bg.jpg" data-background-repeat="repeat" data-background-size="10%" data-background-opacity="0.1">
-					<div class="center-div">Спасибо за участие! 🎉</div>
-					<small class="titles">Презентацию подготовил<br>Максим Гусев ✌🏼</small>
+					<div class="center-div">Спасибо за участие! <span class="emoji">🎉</span></div>
+					<small class="titles">Презентацию подготовил<br>Максим Гусев <span class="emoji">✌🏼</span></small>
 				</section>
 				<section id="settings"  data-background-image="images/bg.jpg" data-background-repeat="repeat" data-background-size="10%" data-background-opacity="0.1">
 					<h3>Настройка таймера</h3>
@@ -1086,7 +1084,7 @@
 			}
 
 			$(".questions-row a").on("click", function (e) {
-				e.target.innerHTML = "✓";
+				e.target.innerHTML = `<span class="emoji">✓</span>`;
 				let target = $(e.target);
 				target.parent().addClass("visited");
 				done_tasks.add(target.attr("href").split("-")[1]);
@@ -1097,7 +1095,7 @@
 			})
 
 			function changeTime(that) {
-				that.nextElementSibling.innerHTML = `<span id="clock">` + that.value + `</span>` + "с";
+				that.nextElementSibling.innerHTML = that.value  + "с";
 				times[Number(that.getAttribute("timer"))] = Number(that.value);
 			}
 		</script>
